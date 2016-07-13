@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": ";;;AAIA,UAAW;EACP,MAAM,EAAE,IAAI;;AAGhB,UAAW;EACP,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,KAAe;;AAGlC,gBAAiB;EACb,OAAO,EAAE,EAAE;EACX,OAAO,EAAE,KAAK;;AAGlB,wBAAyB;EACrB,MAAM,ECnBM,IAAI;;ADsBpB,MAAO;EACH,gBAAgB,EAAE,GAAG",
-"sources": ["../scss/_sticky_footer.scss","../scss/_variables.scss"],
+"mappings": "AAEQ,+IAAuI;;;;;;;ACE/I,UAAW;EACP,MAAM,EAAE,IAAI;;AAGhB,UAAW;EACP,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,KAAe;;AAGlC,gBAAiB;EACb,OAAO,EAAE,EAAE;EACX,OAAO,EAAE,KAAK;;AAGlB,wBAAyB;EACrB,MAAM,ECnBM,IAAI;;ADsBpB,MAAO;EACH,gBAAgB,EAAE,GAAG;;;;;ADbzB,IAAK;EACD,WAAW,EAAE,oBAAoB",
+"sources": ["../scss/main.scss","../scss/_sticky_footer.scss","../scss/_variables.scss"],
 "names": [],
 "file": "main.css"
 }

@@ -1,5 +1,7 @@
 @import "bourbon/_bourbon.scss";
 
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,100,100italic,400italic,500,500italic,700italic,700,900,900italic);
+
 @import "_variables.scss";
 @import "_sticky_footer.scss";
 
@@ -7,5 +9,5 @@
 MAIN STYLES
 ================================================*/
 body {
-    
+    font-family: 'Roboto', sans-serif;
 }

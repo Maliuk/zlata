@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
-<h1>Zlata</h1>
+<div class="container">
+    <h1>Zlata</h1>
+</div>
 
 <?php get_footer(); ?>
