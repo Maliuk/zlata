@@ -38,7 +38,7 @@
         <!-- The little things -->
 
         <!-- GOOGLE FONTS -->
-        
+
         <!-- ./GOOGLE FONTS -->
 
         <!-- MODERNIZR -->
@@ -55,3 +55,49 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+        <!-- HEADER -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a id="logo" href="<?php echo get_home_url(); ?>">
+                            <img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <nav>
+                <div class="container">
+                    <menu>
+                        <li>
+                            <a href="#">О нас</a>
+                        </li>
+                        <li>
+                            <a href="#">Услуги</a>
+                        </li>
+                        <li>
+                            <a href="#">Акции</a>
+                        </li>
+                        <li>
+                            <a href="#">Оборудование</a>
+                        </li>
+                        <li>
+                            <a href="#">Цены</a>
+                        </li>
+                        <li>
+                            <a href="#">Чаво</a>
+                        </li>
+                        <li>
+                            <a href="#">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                    </menu>
+                </div>
+            </nav>
+
+        </header>
+        <!-- ./HEADER -->

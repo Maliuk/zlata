@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="container">
-    <h1>Zlata</h1>
+    <a class="btn btn-default">Отмена</a>
 </div>
 
 <?php get_footer(); ?>

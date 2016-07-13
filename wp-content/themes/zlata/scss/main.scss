@@ -3,11 +3,85 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,100,100italic,400italic,500,500italic,700italic,700,900,900italic);
 
 @import "_variables.scss";
-@import "_sticky_footer.scss";
+
+%main-transition {
+    @include transition(all 0.3s ease);
+}
 
 /*================================================
 MAIN STYLES
 ================================================*/
 body {
     font-family: 'Roboto', sans-serif;
+}
+
+
+.btn {
+    font-size: 14px;
+    color: $dark-gray;
+    padding: 10px 25px;
+    font-weight: 300;
+    border: 1px solid $dark-gray;
+    border-radius: 20px;
+    @extend %main-transition;
+    
+    &:hover {
+        background-color: $dark-gray;
+        color: $white;
+    }
+}
+
+
+
+nav {
+    height: 40px;
+    background-color: $light-gray;
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+
+    menu {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+        list-style: none;
+
+        li {
+            max-height: 40px;
+            display: inline-block;
+            @extend %main-transition;
+
+            &:hover {
+                background-color: $gray;
+            }
+            &:last-child a::after {
+                display: none;
+            }
+        }
+    }
+
+    a {
+        position: relative;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 300;
+        color: $text-color;
+        text-transform: uppercase;
+        line-height: 38px;
+        padding: 0 25px;
+
+        &::after {
+            position: absolute;
+            top: 10px;
+            right: 0;
+            content: "";
+            @include size(1px 20px);
+            background-color: $gray;
+        }
+
+        &:hover, &:focus, &:active {
+            text-decoration: none;
+            color: $text-color;
+        }
+    }
 }
