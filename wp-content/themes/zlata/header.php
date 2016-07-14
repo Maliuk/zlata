@@ -51,7 +51,7 @@
         ?>
     </head>
 
-    <body>
+    <body <?php body_class(); ?>>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -101,3 +101,16 @@
 
         </header>
         <!-- ./HEADER -->
+
+        <div id="after-header">
+            <div class="container">
+
+                <div class="after-header-text col-xs-5 col-xs-offset-6">
+                    <h4>Мы предлагаем:</h4>
+                    <h3>более 150 видов процедур<br />
+                    для красоты и здоровья</h3>
+                    
+                    <a href="#" class="btn">Выбрать процедуру</a>
+                </div>
+            </div>
+        </div>

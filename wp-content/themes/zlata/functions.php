@@ -41,10 +41,12 @@ add_action('wp_enqueue_scripts', 'add_styles');
 function add_scripts() {
     wp_register_script("jquery", "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js", array(), null);
     wp_register_script("bootstrap", get_stylesheet_directory_uri() . "/js/vendor/bootstrap.min.js", array("jquery"), null);
+    wp_register_script("TweenMax", get_stylesheet_directory_uri() . "/js/vendor/greensock-js/src/minified/TweenMax.min.js");
     wp_register_script("main", get_stylesheet_directory_uri() . "/js/main.js", array("jquery"), null);
 
     wp_enqueue_script("jquery");
     wp_enqueue_script("bootstrap");
+    wp_enqueue_script("TweenMax");
     wp_enqueue_script("main");
 
     wp_localize_script('main', 'variables', array('ajaxurl' => admin_url('admin-ajax.php')));
