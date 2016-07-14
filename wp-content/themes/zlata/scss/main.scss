@@ -19,6 +19,8 @@ MAIN STYLES
 ================================================*/
 body {
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: $text-color;
 }
 
 
@@ -37,10 +39,24 @@ body {
     }
 }
 
+.bg-gray {
+    background-color: $light-gray;
+}
+
+.bg-green {
+    background-color: $green;
+}
+
 
 /*================================================
 HEADER
 ================================================*/
+header {
+    position: relative;
+    z-index: 5;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
 nav {
     height: 40px;
     background-color: $light-gray;
@@ -65,6 +81,10 @@ nav {
             &:last-child a::after {
                 display: none;
             }
+        }
+        
+        @media (max-width: 991px) {
+            display: none;
         }
     }
 
@@ -96,10 +116,12 @@ nav {
 
 
 #after-header {
+    position: relative;
     overflow: hidden;
     @include size(100% 460px);
     background-image: url(../img/header-bg.jpg);
     @extend %background-image;
+    z-index: 0;
     @include transform-style(preserve-3d);
     @include perspective(3000px);
 
@@ -155,6 +177,22 @@ nav {
                 color: $green;
                 background-color: $white;
             }
+        }
+    }
+    
+    & + section {
+        position: relative;
+        z-index: 5;
+        box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.home {
+    section {
+        padding: 30px 0;
+        
+        &.bg-green {
+            color: $white;
         }
     }
 }
