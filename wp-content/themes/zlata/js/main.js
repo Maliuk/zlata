@@ -2,6 +2,13 @@
 
 $(function () {
     
+    $('.home section h2.title').each(function () {
+        var $this = $(this);
+        var html = $this.html();
+        $this.html('<div>' + html + '</div>');
+        $('> div', this).append('<span class="rhombus"></span>');
+    });
+    
     //$('#after-header .container').parallax3d();
 });
 
