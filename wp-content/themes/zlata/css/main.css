@@ -24,7 +24,8 @@ MAIN STYLES
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  color: #4c5059; }
+  color: #4c5059;
+  font-size: 14px; }
 
 .btn {
   font-size: 14px;
@@ -45,6 +46,64 @@ body {
 
 .text-green {
   color: #00bfaf; }
+
+ul.list-theme {
+  list-style: none; }
+  ul.list-theme li {
+    position: relative;
+    padding: 10px 10px 10px 21px; }
+    ul.list-theme li::before {
+      content: "";
+      position: absolute;
+      top: 13px;
+      left: 0;
+      height: 12px;
+      width: 12px;
+      background-image: url(../img/list.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 12px 12px; }
+
+ul.services {
+  list-style: none; }
+  ul.services::after {
+    display: table;
+    clear: both;
+    content: ""; }
+  ul.services li {
+    float: left;
+    width: 50%;
+    margin-bottom: 38px;
+    overflow: hidden; }
+    ul.services li .service-content {
+      padding: 0 15px;
+      float: left;
+      box-sizing: border-box;
+      width: 70%; }
+    ul.services li .service-photo {
+      float: left;
+      width: 30%; }
+      ul.services li .service-photo img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px; }
+    ul.services li h3 {
+      margin-top: 0; }
+    @media (max-width: 767px) {
+      ul.services li {
+        float: none;
+        width: 100%; } }
+
+h3 {
+  font-size: 18px; }
+
+p.large {
+  font-size: 18px; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside; }
 
 /*================================================
 HEADER
@@ -160,6 +219,9 @@ nav {
     z-index: 5;
     box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.1); }
 
+/*================================================
+HOME PAGE
+================================================*/
 .home section {
   padding: 30px 0; }
   .home section h2 {
@@ -202,5 +264,38 @@ nav {
     color: #ffffff; }
   .home section.bg-gray h2 {
     color: #00bfaf; }
+
+#stock-home {
+  min-height: 281px;
+  position: relative; }
+  #stock-home::before, #stock-home::after {
+    position: absolute;
+    top: 50%;
+    left: 17px;
+    content: "";
+    height: 258px;
+    width: 217px;
+    margin-top: -129px;
+    background-image: url(../img/stock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 217px 258px;
+    z-index: 0; }
+  #stock-home::after {
+    left: auto;
+    right: 17px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  #stock-home h2.title {
+    border: none; }
+    #stock-home h2.title .rhombus, #stock-home h2.title .rhombus::before, #stock-home h2.title .rhombus::after {
+      border-color: rgba(255, 255, 255, 0.5); }
+
+#map {
+  height: 400px;
+  width: 100%; }
 
 /*# sourceMappingURL=main.css.map */

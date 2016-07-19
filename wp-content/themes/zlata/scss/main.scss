@@ -7,10 +7,10 @@
 
 
 @font-face {
-  font-family: 'Garamond-Bold';
-  src: url('../fonts/garamond/Garamond-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/garamond/Garamond-Bold.woff') format('woff'), url('../fonts/garamond/Garamond-Bold.ttf')  format('truetype'), url('../fonts/garamond/Garamond-Bold.svg#Garamond-Bold') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Garamond-Bold';
+    src: url('../fonts/garamond/Garamond-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/garamond/Garamond-Bold.woff') format('woff'), url('../fonts/garamond/Garamond-Bold.ttf')  format('truetype'), url('../fonts/garamond/Garamond-Bold.svg#Garamond-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -31,6 +31,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: $text-color;
+    font-size: 14px;
 }
 
 
@@ -61,6 +62,88 @@ body {
     color: $light-green;
 }
 
+
+ul.list-theme {
+    list-style: none;
+
+    li {
+        position: relative;
+        padding: 10px 10px 10px 21px;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: 13px;
+            left: 0;
+            @include size(12px);
+            background-image: url(../img/list.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 12px 12px;
+        }
+    }
+}
+
+ul.services {
+    list-style: none;
+    
+    &::after {
+        display: table;
+        clear: both;
+        content: "";
+    }
+    
+    li {
+        float: left;
+        width: 50%;
+        margin-bottom: 38px;
+        overflow: hidden;
+        
+        .service-content {
+            padding: 0 15px;
+            float: left;
+            box-sizing: border-box;
+            width: 70%;
+        }
+        
+        .service-photo {
+            float: left;
+            width: 30%;
+            
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+        }
+        
+        h3 {
+            margin-top: 0;
+        }
+        
+        @media (max-width: 767px) {
+            float: none;
+            width: 100%;
+        }
+    }
+}
+
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    &.large {
+        font-size: 18px;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
 
 /*================================================
 HEADER
@@ -96,7 +179,7 @@ nav {
                 display: none;
             }
         }
-        
+
         @media (max-width: 991px) {
             display: none;
         }
@@ -166,34 +249,34 @@ nav {
             @extend %background-image;
             background-image: url(../img/girl-header.png);
         }
-        
+
         h3, h4 {
             text-transform: uppercase;
             margin: 0;
             line-height: 1.5;
         }
-        
+
         h3 {
             font-size: 24px;
         }
-        
+
         h4 {
             font-size: 18px;
         }
-        
+
         .btn {
             color: $white;
             border: 2px solid $white;
             padding: 10px 15px;
             margin-top: 10px;
-            
+
             &:hover {
                 color: $green;
                 background-color: $white;
             }
         }
     }
-    
+
     & + section {
         position: relative;
         z-index: 5;
@@ -201,25 +284,29 @@ nav {
     }
 }
 
+
+/*================================================
+HOME PAGE
+================================================*/
 .home {
     section {
         padding: 30px 0;
-        
+
         h2 {
             font-family: 'Garamond-Bold', serif;
             font-size: 30px;
             text-transform: uppercase;
             padding-bottom: 10px;
             margin: 0 0 30px 0;
-            
+
             &.title {
                 border-bottom: 1px solid $gray;
-                
+
                 > div {
                     display: inline-block;
                     position: relative;
                 }
-                
+
                 .rhombus {
                     position: absolute;
                     right: -70px;
@@ -227,7 +314,7 @@ nav {
                     @include size(20px);
                     border: 1px solid $light-green;
                     @include transform(rotate(-45deg));
-                    
+
                     &::before, &::after {
                         content: "";
                         position: absolute;
@@ -236,7 +323,7 @@ nav {
                         left: -9px;
                         border: 1px solid $light-green;
                     }
-                    
+
                     &::after {
                         top: auto;
                         left: auto;
@@ -246,15 +333,57 @@ nav {
                 }
             }
         }
-        
+
         &.bg-green {
             color: $white;
         }
-        
+
         &.bg-gray {
             h2 {
                 color: $light-green;
             }
         }
     }
+}
+
+#stock-home {
+    min-height: 281px;
+    position: relative;
+    
+    &::before, &::after {
+        $width: 217px;
+        $height: 258px;
+        position: absolute;
+        top: 50%;
+        left: 17px;
+        content: "";
+        @include size($width $height);
+        margin-top: - ($height / 2);
+        background-image: url(../img/stock.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: $width $height;
+        z-index: 0;
+    }
+    
+    &::after {
+        left: auto;
+        right: 17px;
+        @include transform(rotate(180deg));
+    }
+    
+    h2.title {
+        border: none;
+        
+        .rhombus {
+            &, &::before, &::after {
+                border-color: rgba($white, 0.5);
+            }
+        }
+    }
+}
+
+
+#map {
+    @include size(100% 400px);
 }
