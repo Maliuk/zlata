@@ -9,6 +9,12 @@ $(function () {
         $('> div', this).append('<span class="rhombus"></span>');
     });
 
+    $('.lblog-photo').each(function () {
+        var $this = $(this);
+        var img = 'url(' + $('img', this).attr('src') + ')';
+        $this.css('background-image', img);
+        $('img', this).remove();
+    });
     
     //$('#after-header .container').parallax3d();
     

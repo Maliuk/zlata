@@ -1,6 +1,10 @@
 <!-- FOOTER -->
 <footer>
-
+    <div class="container">
+        <p class="copyright">
+            2010-<?php echo date('Y'); ?> © Пластическая хирургия "Златадерма", г. Николаев
+        </p>
+    </div>
 </footer>
 <!-- ./FOOTER -->
 
