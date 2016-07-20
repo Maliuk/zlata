@@ -2,6 +2,42 @@
 
 $(function () {
 
+    (function () {
+        $('menu').prepend('<li class="helper"></li>');
+        var $helper = $('menu > li.helper');
+        var $active = $('menu > li.active');
+        $('menu > li:not(.active)').hover(function () {
+            $active.addClass('other-hov');
+            var left = $(this).position().left;
+            var width = $(this).outerWidth();
+            $helper.css({
+                'left': left + 'px',
+                'width': width - 1 + 'px'
+            });
+        }, mouseOut);
+        mouseOut();
+
+        function mouseOut() {
+            $active.removeClass('other-hov');
+            $active = $('menu > li.active');
+            if ($active.size() > 0) {
+                var left = $active.position().left;
+                var width = $active.outerWidth();
+                $helper.css({
+                    'left': left + 'px',
+                    'width': width - 1 + 'px'
+                });
+            }
+            else {
+                $helper.css({
+                    'left': '0px',
+                    'width': '0px'
+                });
+            }
+        }
+    })();
+
+
     $('.home section h2.title').each(function () {
         var $this = $(this);
         var html = $this.html();
@@ -15,10 +51,10 @@ $(function () {
         $this.css('background-image', img);
         $('img', this).remove();
     });
-    
+
     //$('#after-header .container').parallax3d();
-    
-    
+
+
     // Google Map
     initMap();
 });
@@ -73,7 +109,7 @@ function initMap() {
         scrollwheel: false,
         zoom: 16
     });
-    
+
     var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,

@@ -60,7 +60,7 @@
         <header>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-3">
                         <a id="logo" href="<?php echo get_home_url(); ?>">
                             <img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt=""/>
                         </a>
@@ -71,7 +71,7 @@
             <nav>
                 <div class="container">
                     <menu>
-                        <li>
+                        <li class="active">
                             <a href="#">О нас</a>
                         </li>
                         <li>
