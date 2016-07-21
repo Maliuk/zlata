@@ -73,6 +73,14 @@
                     <menu>
                         <li class="active">
                             <a href="#">О нас</a>
+                            
+                            <ul>
+                                <li><a href="#">Test sub menu 1</a></li>
+                                <li><a href="#">Test sub menu 2</a></li>
+                                <li><a href="#">Test sub menu 3</a></li>
+                                <li><a href="#">Test sub menu 4</a></li>
+                                <li><a href="#">Test sub menu 5</a></li>
+                            </ul>
                         </li>
                         <li>
                             <a href="#">Услуги</a>
@@ -102,14 +110,25 @@
         </header>
         <!-- ./HEADER -->
 
+        <!-- PRELOADER -->
+        <div id="preloader">
+            <div class="preloader-container">
+                <div class="outer">
+
+                </div>
+                <div class="inner"></div>
+            </div>
+        </div>
+        <!-- ./PRELOADER -->
+
         <div id="after-header">
             <div class="container">
 
                 <div class="after-header-text col-xs-5 col-xs-offset-6">
                     <h4>Мы предлагаем:</h4>
                     <h3>более 150 видов процедур<br />
-                    для красоты и здоровья</h3>
-                    
+                        для красоты и здоровья</h3>
+
                     <a href="#" class="btn">Выбрать процедуру</a>
                 </div>
             </div>

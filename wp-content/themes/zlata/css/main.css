@@ -3,12 +3,66 @@
 /*================================================
 COLORS
 ================================================*/
+#preloader {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  transition: all 0.7s ease; }
+  .js #preloader {
+    opacity: 1;
+    visibility: visible; }
+  #preloader.preloader-hide {
+    opacity: 0;
+    visibility: hidden; }
+
+.preloader-container {
+  width: 100px;
+  margin: 25rem auto;
+  position: relative; }
+
+.outer {
+  width: 100px;
+  height: 100px;
+  border-top: 5px solid #00bfaf;
+  border-radius: 50%;
+  -webkit-animation: rot1 55s linear infinite; }
+
+@-webkit-keyframes rot1 {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(11360deg); } }
+.inner {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border-top: 3.5px solid #e5e5e5;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  -webkit-animation: rot2 15s linear  infinite forwards; }
+
+@-webkit-keyframes rot2 {
+  from {
+    transform: rotate(3360deg); }
+  to {
+    transform: rotate(0deg); } }
 @font-face {
   font-family: 'Garamond-Bold';
   src: url("../fonts/garamond/Garamond-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/garamond/Garamond-Bold.woff") format("woff"), url("../fonts/garamond/Garamond-Bold.ttf") format("truetype"), url("../fonts/garamond/Garamond-Bold.svg#Garamond-Bold") format("svg");
   font-weight: normal;
   font-style: normal; }
-.btn, nav menu > li, nav menu > li > a {
+.btn, nav menu > li, nav menu > li > a, nav menu > li > ul, nav menu > li > ul a {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease; }
@@ -132,8 +186,12 @@ HEADER
 ================================================*/
 header {
   position: relative;
-  z-index: 5;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1); }
+  z-index: 300;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; }
+  header > div {
+    padding-top: 20px;
+    padding-bottom: 20px; }
 
 nav {
   height: 40px;
@@ -193,6 +251,33 @@ nav {
         color: #ffffff; }
       nav menu > li.active.other-hov {
         background-color: #e5e5e5; }
+      nav menu > li > ul {
+        opacity: 0;
+        visibility: hidden;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: auto;
+        min-width: 260px;
+        border-top: 1px solid #00bfaf;
+        background-color: #f5f5f5;
+        box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1); }
+        nav menu > li > ul a {
+          display: block;
+          text-align: left;
+          padding: 15px 25px;
+          color: #4c5059; }
+          nav menu > li > ul a:hover, nav menu > li > ul a:focus, nav menu > li > ul a:active {
+            color: #4c5059;
+            text-decoration: none;
+            background-color: #e5e5e5; }
+      nav menu > li:hover > ul {
+        opacity: 1;
+        visibility: visible; }
     @media (max-width: 991px) {
       nav menu {
         display: none; } }

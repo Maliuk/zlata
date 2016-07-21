@@ -1,0 +1,58 @@
+#preloader {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: $white;
+    @include size(100%);
+    @include transition(all 0.7s ease);
+
+    .js & {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    &.preloader-hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.preloader-container{
+    width: 100px;
+    margin: 25rem auto;
+    position: relative;
+}
+.outer{
+    width: 100px;
+    height: 100px;
+    border-top:5px solid $light-green;
+    border-radius:50%;
+
+    -webkit-animation:rot1 55s linear infinite;
+}
+
+@-webkit-keyframes rot1 {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(11360deg);}
+}
+
+
+.inner{
+    width: 84px;height: 84px;
+    border-radius:50%;
+    border-top:3.5px solid $gray;
+    position: absolute;
+    top: 8px;
+    left:8px;
+    -webkit-animation:rot2 15s linear  infinite forwards;
+}
+
+@-webkit-keyframes rot2 {
+    from {transform: rotate(3360deg);}
+    to {transform: rotate(0deg);}
+}

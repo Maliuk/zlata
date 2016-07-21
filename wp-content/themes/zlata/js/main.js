@@ -6,16 +6,20 @@ $(function () {
         $('menu').prepend('<li class="helper"></li>');
         var $helper = $('menu > li.helper');
         var $active = $('menu > li.active');
-        $('menu > li:not(.active)').hover(function () {
-            $active.addClass('other-hov');
-            var left = $(this).position().left;
-            var width = $(this).outerWidth();
-            $helper.css({
-                'left': left + 'px',
-                'width': width - 1 + 'px'
-            });
-        }, mouseOut);
-        mouseOut();
+
+        $active.addClass('other-hov');
+        $(window).load(function () {
+            $('menu > li:not(.active)').hover(function () {
+                $active.addClass('other-hov');
+                var left = $(this).position().left;
+                var width = $(this).outerWidth();
+                $helper.css({
+                    'left': left + 'px',
+                    'width': width - 1 + 'px'
+                });
+            }, mouseOut);
+            mouseOut();
+        });
 
         function mouseOut() {
             $active.removeClass('other-hov');
@@ -36,6 +40,16 @@ $(function () {
             }
         }
     })();
+
+    $(window).load(function () {
+        setTimeout(function () {
+            $('#preloader').addClass('preloader-hide');
+
+            setTimeout(function () {
+                $('#preloader').remove();
+            }, 3000);
+        }, 1);
+    });
 
 
     $('.home section h2.title').each(function () {
