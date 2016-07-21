@@ -65,6 +65,12 @@ body {
 
 ul.list-theme {
     list-style: none;
+    
+    &::after {
+        display: table;
+        content: "";
+        clear: both;
+    }
 
     li {
         position: relative;

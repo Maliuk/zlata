@@ -103,6 +103,10 @@ body {
 
 ul.list-theme {
   list-style: none; }
+  ul.list-theme::after {
+    display: table;
+    content: "";
+    clear: both; }
   ul.list-theme li {
     position: relative;
     padding: 10px 10px 10px 21px; }

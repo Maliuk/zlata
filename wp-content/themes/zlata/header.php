@@ -84,6 +84,12 @@
                         </li>
                         <li>
                             <a href="#">Услуги</a>
+                            
+                            <ul>
+                                <li><a href="#">Test sub menu 1</a></li>
+                                <li><a href="#">Test sub menu 2</a></li>
+                                <li><a href="#">Test sub menu 3</a></li>
+                            </ul>
                         </li>
                         <li>
                             <a href="#">Акции</a>
