@@ -275,6 +275,23 @@ header {
     }
 }
 
+@media (max-width: 991px) {
+    header {
+        
+        .address, .phones {
+            text-align: center;
+            margin: 15px 0;
+            line-height: inherit;
+        }
+    }
+    
+    #logo {
+        margin: 15px 0;
+        display: block;
+        text-align: center;
+    }
+}
+
 nav {
     height: 40px;
     background-color: $light-gray;
@@ -546,6 +563,17 @@ HOME PAGE
                 background-size: 1094px 774px;
                 background-repeat: no-repeat;
                 background-position: 120% top;
+                z-index: 1;
+                
+                @media (max-width: 991px) {
+                    opacity: 0.5;
+                    background-position: center;
+                }
+            }
+            
+            .container {
+                position: relative;
+                z-index: 5;
             }
         }
     }

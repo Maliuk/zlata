@@ -72,7 +72,11 @@
                         <div class="address">
                             Адрес:  <span>Украина, г.Николаев, ул.Бузника 14</span>
                         </div>
-                        <div class="phones">+38 <span>(073)</span> 242 - 42 - 42, +38 <span>(068)</span> 242 - 42 - 42,   +38 <span>(095)</span> 242 - 42 - 42</div>
+                        <div class="phones">
+                            +38 <span>(073)</span> 242 - 42 - 42,<br class="hidden-lg hidden-md" />
+                            +38 <span>(068)</span> 242 - 42 - 42,<br class="hidden-lg hidden-md" />
+                            +38 <span>(095)</span> 242 - 42 - 42
+                        </div>
                     </div>
                 </div>
             </div>
