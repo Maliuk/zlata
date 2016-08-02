@@ -58,12 +58,21 @@
 
         <!-- HEADER -->
         <header>
+            
             <div class="container">
+                <h4>лазерно-эстетической медицины, косметологии и пластической хирургии</h4>
+                <div class="clearfix"></div>
                 <div class="row">
                     <div class="col-md-3">
                         <a id="logo" href="<?php echo get_home_url(); ?>">
                             <img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt=""/>
                         </a>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="address">
+                            Адрес:  <span>Украина, г.Николаев, ул.Бузника 14</span>
+                        </div>
+                        <div class="phones">+38 <span>(073)</span> 242 - 42 - 42, +38 <span>(068)</span> 242 - 42 - 42,   +38 <span>(095)</span> 242 - 42 - 42</div>
                     </div>
                 </div>
             </div>

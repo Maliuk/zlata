@@ -2,6 +2,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,100,100italic,400italic,500,500italic,700italic,700,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond&subset=latin,cyrillic);
+@import "../fonts/Ariston-Normal/styles.css";
 
 @import "_variables.scss";
 @import "_preloader.scss";
@@ -62,10 +63,22 @@ body {
     color: $light-green;
 }
 
+.ariston {
+    font-family: 'Ariston-Normal';
+}
+
+h3.ariston {
+    color: $light-green;
+    text-align: center;
+    font-weight: normal;
+    font-family: 'Ariston-Normal';
+    font-size: 40px;
+}
+
 
 ul.list-theme {
     list-style: none;
-    
+
     &::after {
         display: table;
         content: "";
@@ -194,9 +207,71 @@ header {
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
     background-color: $white;
     
-    > div {
-        padding-top: 20px;
-        padding-bottom: 20px;
+    .container {
+        padding-bottom: 10px;
+    }
+
+    &::after {
+        position: absolute;
+        @include size(50% 30px);
+        background-color: $light-green;
+        top: 0;
+        right: 0;
+        content: "";
+        z-index: 0;
+    }
+
+    .container {
+        position: relative;
+        z-index: 5;
+    }
+
+    h4 {
+        position: relative;
+        margin: 0;
+        padding: 10px 15px;
+        line-height: 1;
+        color: $white;
+        background-color: $light-green;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 10px;
+        text-transform: uppercase;
+        width: 70%;
+        float: right;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -10px;
+
+            @include triangle(20px 30px, $white, down);
+        }
+    }
+    
+    .address {
+        text-align: right;
+        text-transform: uppercase;
+        font-style: italic;
+        line-height: 1;
+        margin: 22px 0;
+        
+        span {
+            text-transform: none;
+            color: $dark-gray;
+        }
+    }
+    
+    .phones {
+        text-align: right;
+        font-size: 20px;
+        margin-bottom: 25px;
+        line-height: 1;
+        
+        span {
+            color: $light-green;
+        }
     }
 }
 
@@ -213,7 +288,7 @@ nav {
         margin: 0;
         font-size: 0;
         list-style: none;
-        
+
         li.helper {
             position: absolute;
             top: 0;
@@ -266,15 +341,15 @@ nav {
                     color: $white;
                 }
             }
-            
+
             &.active > a {
                 color: $white;
             }
-            
+
             &.active.other-hov {
                 background-color: $gray;
             }
-            
+
             > ul {
                 opacity: 0;
                 visibility: hidden;
@@ -291,14 +366,14 @@ nav {
                 background-color: $light-gray;
                 box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
                 @extend %main-transition;
-                
+
                 a {
                     display: block;
                     text-align: left;
                     padding: 15px 25px;
                     color: $text-color;
                     @extend %main-transition;
-                    
+
                     &:hover, &:focus, &:active {
                         color: $text-color;
                         text-decoration: none;
@@ -306,7 +381,7 @@ nav {
                     }
                 }
             }
-            
+
             &:hover > ul {
                 opacity: 1;
                 visibility: visible;
@@ -521,6 +596,10 @@ HOME PAGE
 }
 
 
+
+/*================================================
+FOOTER
+================================================*/
 footer {
     background-color: $green;
     background-image: url(../img/pattern.jpg);
