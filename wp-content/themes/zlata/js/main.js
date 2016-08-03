@@ -15,7 +15,8 @@ $(function () {
                 var width = $(this).outerWidth();
                 $helper.css({
                     'left': left + 'px',
-                    'width': width - 1 + 'px'
+                    'width': width - 1 + 'px',
+                    'opacity': '1'
                 });
             }, mouseOut);
             mouseOut();
@@ -29,13 +30,15 @@ $(function () {
                 var width = $active.outerWidth();
                 $helper.css({
                     'left': left + 'px',
-                    'width': width - 1 + 'px'
+                    'width': width - 1 + 'px',
+                    'opacity': '1'
                 });
             }
             else {
                 $helper.css({
-                    'left': '0px',
-                    'width': '0px'
+                    'left': '50%',
+                    'width': '0px',
+                    'opacity': '0'
                 });
             }
         }

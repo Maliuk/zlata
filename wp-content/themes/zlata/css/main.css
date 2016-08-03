@@ -283,7 +283,7 @@ nav {
     nav menu li.helper {
       position: absolute;
       top: 0;
-      left: 0;
+      left: 50%;
       z-index: 1;
       height: 100%;
       width: 0px;

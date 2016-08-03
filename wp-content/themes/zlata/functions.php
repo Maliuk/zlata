@@ -6,6 +6,12 @@ remove_action('wp_head', 'wp_generator'); // Removes the WordPress version as a 
 
 add_theme_support('post-thumbnails');
 
+function register_main_menu() {
+    register_nav_menu('header-nav', __('Header Menu'));
+}
+
+add_action('init', 'register_main_menu');
+
 show_admin_bar(false);
 
 // =============================================================

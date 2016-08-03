@@ -83,7 +83,17 @@
 
             <nav>
                 <div class="container">
-                    <menu>
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'header-nav',
+                        'container' => false,
+                        'echo' => true,
+                        'items_wrap' => '<menu id="%1$s" class="%2$s">%3$s</menu>',
+                        'depth' => 2,
+                    ));
+                    ?>
+                    
+                    <!--<menu>
                         <li class="active">
                             <a href="#">О нас</a>
                             
@@ -122,7 +132,7 @@
                         <li>
                             <a href="#">Контакты</a>
                         </li>
-                    </menu>
+                    </menu>-->
                 </div>
             </nav>
 

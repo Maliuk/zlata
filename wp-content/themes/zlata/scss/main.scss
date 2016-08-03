@@ -309,7 +309,7 @@ nav {
         li.helper {
             position: absolute;
             top: 0;
-            left: 0;
+            left: 50%;
             z-index: 1;
             @include size(0px 100%);
             content: "";
