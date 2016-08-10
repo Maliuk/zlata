@@ -92,47 +92,6 @@
                         'depth' => 2,
                     ));
                     ?>
-                    
-                    <!--<menu>
-                        <li class="active">
-                            <a href="#">О нас</a>
-                            
-                            <ul>
-                                <li><a href="#">Test sub menu 1</a></li>
-                                <li><a href="#">Test sub menu 2</a></li>
-                                <li><a href="#">Test sub menu 3</a></li>
-                                <li><a href="#">Test sub menu 4</a></li>
-                                <li><a href="#">Test sub menu 5</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Услуги</a>
-                            
-                            <ul>
-                                <li><a href="#">Test sub menu 1</a></li>
-                                <li><a href="#">Test sub menu 2</a></li>
-                                <li><a href="#">Test sub menu 3</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Акции</a>
-                        </li>
-                        <li>
-                            <a href="#">Оборудование</a>
-                        </li>
-                        <li>
-                            <a href="#">Цены</a>
-                        </li>
-                        <li>
-                            <a href="#">Чаво</a>
-                        </li>
-                        <li>
-                            <a href="#">Отзывы</a>
-                        </li>
-                        <li>
-                            <a href="#">Контакты</a>
-                        </li>
-                    </menu>-->
                 </div>
             </nav>
 
