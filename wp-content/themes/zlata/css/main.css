@@ -275,6 +275,9 @@ nav {
   border-bottom: 1px solid #e5e5e5; }
   nav .container {
     min-height: 100%; }
+    @media (max-width: 991px) {
+      nav .container {
+        width: 100%; } }
   nav menu {
     position: relative;
     text-align: center;
