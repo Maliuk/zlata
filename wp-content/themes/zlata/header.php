@@ -58,7 +58,7 @@
 
         <!-- HEADER -->
         <header>
-            
+
             <div class="container">
                 <h4>лазерно-эстетической медицины, косметологии и пластической хирургии</h4>
                 <div class="clearfix"></div>
@@ -92,6 +92,12 @@
                         'depth' => 2,
                     ));
                     ?>
+
+                    <!-- BURGER -->
+                    <button class="c-hamburger c-hamburger--htx">
+                        <span>toggle menu</span>
+                    </button>
+                    <!-- BURGER -->
                 </div>
             </nav>
 
