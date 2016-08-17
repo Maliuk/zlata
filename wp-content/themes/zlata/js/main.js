@@ -62,7 +62,7 @@ $(function () {
         $('> div', this).append('<span class="rhombus"></span>');
     });
 
-    $('.lblog-photo').each(function () {
+    $('.lblog-photo, .img-wrap').each(function () {
         var $this = $(this);
         var img = 'url(' + $('img', this).attr('src') + ')';
         $this.css('background-image', img);

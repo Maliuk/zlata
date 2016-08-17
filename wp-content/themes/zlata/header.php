@@ -115,15 +115,17 @@
         </div>
         <!-- ./PRELOADER -->
 
-        <div id="after-header">
-            <div class="container">
+        <?php if (is_home()) { ?>
+            <div id="after-header">
+                <div class="container">
 
-                <div class="after-header-text col-xs-5 col-xs-offset-6">
-                    <h4>Мы предлагаем:</h4>
-                    <h3>более 150 видов процедур<br />
-                        для красоты и здоровья</h3>
+                    <div class="after-header-text col-xs-5 col-xs-offset-6">
+                        <h4>Мы предлагаем:</h4>
+                        <h3>более 150 видов процедур<br />
+                            для красоты и здоровья</h3>
 
-                    <a href="#" class="btn">Выбрать процедуру</a>
+                        <a href="#" class="btn">Выбрать процедуру</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        <?php } ?>
