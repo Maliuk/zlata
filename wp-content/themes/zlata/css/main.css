@@ -73,6 +73,14 @@ COLORS
   background-repeat: no-repeat;
   background-size: cover; }
 
+::-moz-selection {
+  background-color: rgba(0, 191, 175, 0.5);
+  color: #ffffff; }
+
+::selection {
+  background-color: rgba(0, 191, 175, 0.5);
+  color: #ffffff; }
+
 /*================================================
 MAIN STYLES
 ================================================*/
@@ -725,37 +733,53 @@ NEWS BLOG
         font-style: normal; }
 
 /*================================================
+PAGE
+================================================*/
+.page-template-default .blog-image {
+  margin-bottom: 20px;
+  overflow: hidden;
+  height: 350px;
+  width: 100%; }
+  .page-template-default .blog-image .img-wrap {
+    height: 100%;
+    width: 100%; }
+
+/*================================================
 CONTACT PAGE
 ================================================*/
-.page-template-page-contact #content a[href^="mailto:"] {
-  color: inherit; }
-.page-template-page-contact #content h3 {
-  margin: 40px 0 15px 0; }
-  .page-template-page-contact #content h3:first-of-type {
-    margin-top: 0px; }
-.page-template-page-contact #content p .fa {
-  margin-right: 8px; }
-.page-template-page-contact #content .contact-image {
-  overflow: hidden;
-  height: 400px;
-  width: 100%; }
-  .page-template-page-contact #content .contact-image .img-wrap {
-    height: 100%;
-    width: 100%;
-    -webkit-transition: all 1.2s ease;
-    -moz-transition: all 1.2s ease;
-    transition: all 1.2s ease;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1); }
-    .page-template-page-contact #content .contact-image .img-wrap:hover {
-      -webkit-transform: scale(1.1);
-      -moz-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      -o-transform: scale(1.1);
-      transform: scale(1.1); }
+.page-template-page-contact #content {
+  position: relative;
+  z-index: 10;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1); }
+  .page-template-page-contact #content a[href^="mailto:"] {
+    color: inherit; }
+  .page-template-page-contact #content h3 {
+    margin: 40px 0 15px 0; }
+    .page-template-page-contact #content h3:first-of-type {
+      margin-top: 0px; }
+  .page-template-page-contact #content p .fa {
+    margin-right: 8px; }
+  .page-template-page-contact #content .contact-image {
+    overflow: hidden;
+    height: 400px;
+    width: 100%; }
+    .page-template-page-contact #content .contact-image .img-wrap {
+      height: 100%;
+      width: 100%;
+      -webkit-transition: all 1.2s ease;
+      -moz-transition: all 1.2s ease;
+      transition: all 1.2s ease;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1); }
+      .page-template-page-contact #content .contact-image .img-wrap:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1); }
 
 /*================================================
 FOOTER
