@@ -39,50 +39,31 @@
         <h2 class="widget-title">Последние новости</h2>
 
         <ul>
-            <li>
-                <a href="#">
-                    <div class="img-wrap">
-                        <img src="<?php bloginfo('template_url'); ?>/img/temp/ln1.jpg" alt=""/>
-                    </div>
+            <?php
+            $args = array(
+                'post_type' => 'news',
+                'posts_per_page' => 4
+            );
+            $posts = new WP_Query($args);
+            ?>
+            <?php
+            while ($posts->have_posts()) {
+                $posts->the_post();
+                ?>
+                <li>
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="img-wrap">
+                            <?php if (has_post_thumbnail()) { ?>
+                                <?php the_post_thumbnail(); ?>
+                            <?php } ?>
+                        </div>
 
-                    <h4>Искусство страсти</h4>
+                        <h4><?php the_title(); ?></h4>
 
-                    <time><i class="fa fa-clock-o" aria-hidden="true"></i> 27 Июня 2016 г.</time>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="img-wrap">
-                        <img src="<?php bloginfo('template_url'); ?>/img/temp/ln2.jpg" alt=""/>
-                    </div>
-
-                    <h4>Искусство страсти</h4>
-
-                    <time><i class="fa fa-clock-o" aria-hidden="true"></i> 27 Июня 2016 г.</time>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="img-wrap">
-                        <img src="<?php bloginfo('template_url'); ?>/img/temp/ln3.jpg" alt=""/>
-                    </div>
-
-                    <h4>Искусство страсти</h4>
-
-                    <time><i class="fa fa-clock-o" aria-hidden="true"></i> 27 Июня 2016 г.</time>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="img-wrap">
-                        <img src="<?php bloginfo('template_url'); ?>/img/temp/ln4.jpg" alt=""/>
-                    </div>
-
-                    <h4>Искусство страсти</h4>
-
-                    <time><i class="fa fa-clock-o" aria-hidden="true"></i> 27 Июня 2016 г.</time>
-                </a>
-            </li>
+                        <time><i class="fa fa-clock-o" aria-hidden="true"></i> <?php the_time('d F Y г.'); ?></time>
+                    </a>
+                </li>
+            <?php } ?>
         </ul>
     </div>
 </aside>

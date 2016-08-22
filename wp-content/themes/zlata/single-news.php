@@ -1,30 +1,16 @@
-<?php
-/*
-  Template Name: News
- */
-?>
-
 <?php get_header(); ?>
 
 <div id="content">
 
     <div class="container">
-        <h1 class="page-title"><?php the_title(); ?></h1>
+        <h1 class="page-title">Новости</h1>
 
         <div class="row">
             <div class="col-md-8">
 
                 <?php
-                $args = array(
-                    'post_type' => 'news',
-                    'posts_per_page' => -1
-                );
-                $posts = new WP_Query($args);
-                ?>
-
-                <?php
-                while ($posts->have_posts()) {
-                    $posts->the_post();
+                while (have_posts()) {
+                    the_post();
                     ?>
 
                     <article>
@@ -44,7 +30,7 @@
                             <i class="fa fa-comment-o" aria-hidden="true"></i> 3
 
                             <div class="right">
-                                <time><?php the_time('d F Y г.'); ?></time> / <a class="read-more" href="<?php the_permalink(); ?>">Подробнее</a>
+                                <time><?php the_time('d F Y г.'); ?></time> / <a class="read-more" href="<?php echo get_home_url(); ?>/zlata-news/">Назад к записям</a>
                             </div>
                         </div>
                     </article>

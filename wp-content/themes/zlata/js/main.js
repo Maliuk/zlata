@@ -69,6 +69,25 @@ $(function () {
         $('img', this).remove();
     });
 
+
+    (function () {
+        $('.zl-collapse .zl-collapse-title').click(function (e) {
+            e.preventDefault();
+            
+            var active = $(this).hasClass('active');
+
+            $('.zl-collapse .zl-collapse-title.active').siblings(".zl-collapse-content").slideUp(300);
+            $('.zl-collapse .zl-collapse-title').removeClass('active');
+            if (active) {
+                //$(this).removeClass('active');
+                //$(this).siblings(".zl-collapse-content").slideUp(300);
+                return;
+            }
+            $(this).addClass('active');
+            $(this).siblings(".zl-collapse-content").slideDown(300);
+        });
+    })();
+
     //$('#after-header .container').parallax3d();
 
 

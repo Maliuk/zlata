@@ -62,9 +62,82 @@ function add_scripts() {
 
 add_action('wp_enqueue_scripts', 'add_scripts');
 
-
-
 // =============================================================
 // Custom Post Types
 // =============================================================
 
+function custom_posts() {
+
+    $labels = array(
+        'name' => 'Новости',
+        'singular_name' => 'Новости',
+        'add_new' => 'Добавить новость',
+        'add_new_item' => 'Добавить новость',
+        'edit_item' => 'Редактировать новость',
+        'new_item' => 'Новая новость',
+        'view_item' => 'Просмотреть новость',
+        'search_items' => 'Найти новость',
+        'not_found' => 'Ничего не найдено',
+        'not_found_in_trash' => 'новостей нет',
+        'parent_item_colon' => '',
+        'menu_name' => 'Новости'
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => true,
+        'menu_position' => null,
+        'menu_icon' => 'dashicons-location',
+        'supports' => array('title', 'editor', 'excerpt', 'author', 'thumbnails', 'thumbnail')
+    );
+    register_post_type('news', $args);
+
+    $labels = array(
+        'name' => 'ЧаВо',
+        'singular_name' => 'ЧаВо',
+        'add_new' => 'Добавить ЧаВо',
+        'add_new_item' => 'Добавить ЧаВо',
+        'edit_item' => 'Редактировать ЧаВо',
+        'new_item' => 'Новая ЧаВо',
+        'view_item' => 'Просмотреть ЧаВо',
+        'search_items' => 'Найти ЧаВо',
+        'not_found' => 'Ничего не найдено',
+        'not_found_in_trash' => 'ЧаВо нет',
+        'parent_item_colon' => '',
+        'menu_name' => 'ЧаВо'
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => true,
+        'menu_position' => null,
+        'supports' => array('title', 'editor', 'author')
+    );
+    register_post_type('FAQ_post', $args);
+}
+
+add_action('init', 'custom_posts');
+
+
+add_filter('nav_menu_css_class', 'special_nav_class', 10, 2);
+
+function special_nav_class($classes, $item) {
+    if (in_array('current-menu-item', $classes) || in_array('current-menu-parent', $classes)) {
+        $classes[] = 'active ';
+    }
+    return $classes;
+}
