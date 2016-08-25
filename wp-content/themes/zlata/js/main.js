@@ -73,7 +73,7 @@ $(function () {
     (function () {
         $('.zl-collapse .zl-collapse-title').click(function (e) {
             e.preventDefault();
-            
+
             var active = $(this).hasClass('active');
 
             $('.zl-collapse .zl-collapse-title.active').siblings(".zl-collapse-content").slideUp(300);
@@ -92,7 +92,8 @@ $(function () {
 
 
     // Google Map
-    initMap();
+    if ($('#map').size() > 0)
+        initMap();
 });
 
 

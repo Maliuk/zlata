@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div id="content">
-    
+
     <section class="bg-gray">
         <div class="container">
             <h2 class="text-green">О клинике</h2>
@@ -127,7 +127,7 @@
             <p>Мы стараемся сразу рассказать о результатах нашей лазерной и эстетической медицины. Наша клиника очень дорожит своей хорошей репутацией, достигнутой за многие года  плодотворной работы. Клиенты ценят нас за честность, обращаясь к нам вновь и вновь. Вы не найдете плохие впечатления о нас, если будете искать "Златадерма в Николаеве: отзывы".</p>
 
             <div class="clearfix"></div>
-            
+
             <p class="text-center">Приходите в клинику лазерно-эстетической медицины, косметологии и пластической хирургии ЗлатаДерма.</p>
             <h3 class="ariston">Мы работаем для Вас!</h3>
         </div>
@@ -144,50 +144,31 @@
             <h2 class="title">новости</h2>
 
             <ul class="list-blog">
-                <li>
-                    <div class="lblog-photo">
-                        <img src="<?php bloginfo('template_url'); ?>/img/temp/n1.jpg" alt=""/>
-                    </div>
+                <?php
+                $args = array(
+                    'post_type' => 'news',
+                    'posts_per_page' => 4
+                );
+                $posts = new WP_Query($args);
+                ?>
+                <?php
+                while ($posts->have_posts()) {
+                    $posts->the_post();
+                    ?>
+                    <li>
+                        <?php if (has_post_thumbnail()) { ?>
+                            <div class="lblog-photo">
+                                <?php the_post_thumbnail(); ?>
+                            </div>
+                        <?php } ?>
 
-                    <div class="lblog-content">
-                        <h3>Заголовок новости</h3>
-                        <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает недоумение при попытках прочитать рыбу текст.</p>
-                        <a href="#" class="readmore">Подробнее</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="lblog-photo">
-                        <img src="<?php bloginfo('template_url'); ?>/img/temp/n2.jpg" alt=""/>
-                    </div>
-
-                    <div class="lblog-content">
-                        <h3>Заголовок новости</h3>
-                        <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает недоумение при попытках прочитать рыбу текст.</p>
-                        <a href="#" class="readmore">Подробнее</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="lblog-photo">
-                        <img src="<?php bloginfo('template_url'); ?>/img/temp/n3.jpg" alt=""/>
-                    </div>
-
-                    <div class="lblog-content">
-                        <h3>Заголовок новости</h3>
-                        <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает недоумение при попытках прочитать рыбу текст.</p>
-                        <a href="#" class="readmore">Подробнее</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="lblog-photo">
-                        <img src="<?php bloginfo('template_url'); ?>/img/temp/n4.jpg" alt=""/>
-                    </div>
-
-                    <div class="lblog-content">
-                        <h3>Заголовок новости</h3>
-                        <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает недоумение при попытках прочитать рыбу текст.</p>
-                        <a href="#" class="readmore">Подробнее</a>
-                    </div>
-                </li>
+                        <div class="lblog-content">
+                            <h3><?php the_title(); ?></h3>
+                            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает недоумение при попытках прочитать рыбу текст.</p>
+                            <a href="<?php the_permalink(); ?>" class="readmore">Подробнее</a>
+                        </div>
+                    </li>
+                <?php } ?>
             </ul>
         </div>
     </section>
