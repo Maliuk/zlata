@@ -728,8 +728,10 @@ HOME PAGE
       z-index: 5; }
 
 #stock-home {
-  min-height: 281px;
-  position: relative; }
+  position: relative;
+  z-index: 10;
+  height: 281px;
+  margin-bottom: 100px; }
   #stock-home::before, #stock-home::after {
     position: absolute;
     top: 50%;
@@ -755,6 +757,54 @@ HOME PAGE
     border: none; }
     #stock-home h2.title .rhombus, #stock-home h2.title .rhombus::before, #stock-home h2.title .rhombus::after {
       border-color: rgba(255, 255, 255, 0.5); }
+
+#home-slider {
+  position: relative;
+  max-width: 940px;
+  margin: 0 auto;
+  z-index: 10; }
+  #home-slider .slider-dots {
+    position: relative;
+    top: -20px;
+    list-style: none;
+    text-align: right;
+    margin: 0;
+    padding: 0; }
+    #home-slider .slider-dots li {
+      display: inline-block;
+      height: 9px;
+      width: 9px;
+      margin: 4px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      opacity: 0.3;
+      cursor: pointer; }
+      #home-slider .slider-dots li.active {
+        opacity: 1; }
+  #home-slider .slides {
+    overflow: hidden;
+    position: relative;
+    width: 100%; }
+    #home-slider .slides::before {
+      display: block;
+      width: 100%;
+      content: "";
+      padding-top: 24%; }
+    #home-slider .slides .slide {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-transition: all 0.6s ease;
+      -moz-transition: all 0.6s ease;
+      transition: all 0.6s ease; }
+      #home-slider .slides .slide.active {
+        opacity: 1;
+        visibility: visible; }
+      #home-slider .slides .slide img {
+        width: 100%;
+        height: auto; }
 
 #map {
   position: relative;

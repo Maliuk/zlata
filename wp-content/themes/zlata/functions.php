@@ -49,12 +49,14 @@ function add_scripts() {
     wp_register_script("bootstrap", get_stylesheet_directory_uri() . "/js/vendor/bootstrap.min.js", array("jquery"), null);
     wp_register_script("TweenMax", get_stylesheet_directory_uri() . "/js/vendor/greensock-js/src/minified/TweenMax.min.js");
     wp_register_script('google-map', 'https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&language=ru&key=AIzaSyD7u_UGkHAHL4bOttXAkOlM9_GbW0bOkns');
+    wp_register_script("home-slider", get_stylesheet_directory_uri() . "/js/home-slider.js", array("jquery"), null);
     wp_register_script("main", get_stylesheet_directory_uri() . "/js/main.js", array("jquery"), null);
 
     wp_enqueue_script("jquery");
     wp_enqueue_script("bootstrap");
     wp_enqueue_script("TweenMax");
     wp_enqueue_script('google-map');
+    wp_enqueue_script("home-slider");
     wp_enqueue_script("main");
 
     wp_localize_script('main', 'variables', array('ajaxurl' => admin_url('admin-ajax.php')));

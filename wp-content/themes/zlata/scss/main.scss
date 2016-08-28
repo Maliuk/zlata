@@ -622,7 +622,7 @@ nav {
                     }
                 }
             }
-            
+
             &.columns {
                 > ul.sub-menu {
                     @include column-count(3);
@@ -909,8 +909,10 @@ HOME PAGE
 }
 
 #stock-home {
-    min-height: 281px;
     position: relative;
+    z-index: 10;
+    height: 281px;
+    margin-bottom: 100px;
 
     &::before, &::after {
         $width: 217px;
@@ -940,6 +942,69 @@ HOME PAGE
         .rhombus {
             &, &::before, &::after {
                 border-color: rgba($white, 0.5);
+            }
+        }
+    }
+}
+
+#home-slider {
+    position: relative;
+    max-width: 940px;
+    margin: 0 auto;
+    z-index: 10;
+    //@include transform(translate(-50%, -50%));
+    
+    .slider-dots {
+        position: relative;
+        top: -20px;
+        list-style: none;
+        text-align: right;
+        margin: 0;
+        padding: 0;
+        
+        li {
+            display: inline-block;
+            @include size(9px);
+            margin: 4px;
+            border-radius: 50%;
+            background-color: $white;
+            opacity: 0.3;
+            cursor: pointer;
+            
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .slides {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        
+        &::before {
+            display: block;
+            width: 100%;
+            content: "";
+            padding-top: 24%;
+        }
+        
+        .slide {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include transition(all 0.6s ease);
+            
+            &.active {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            img {
+                width: 100%;
+                height: auto;
             }
         }
     }
@@ -1032,7 +1097,7 @@ PAGE
                     }
                 }
             }
-            
+
             img {
                 max-width: 100%;
                 height: auto;

@@ -136,6 +136,30 @@
     <section class="bg-green" id="stock-home">
         <div class="container">
             <h2 class="title">Акции</h2>
+            
+            <div id="home-slider">
+                
+                <ul class="slider-dots">
+                </ul>
+                
+                <div class="slides">
+                    <div class="slide">
+                        <a href="">
+                            <img src="<?php bloginfo('template_url'); ?>/img/baners/bunner-1.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="">
+                            <img src="<?php bloginfo('template_url'); ?>/img/baners/bunner-2.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="">
+                            <img src="<?php bloginfo('template_url'); ?>/img/baners/bunner-3.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
