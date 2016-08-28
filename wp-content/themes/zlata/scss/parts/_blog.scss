@@ -1,0 +1,50 @@
+/*================================================
+NEWS BLOG
+================================================*/
+.page-template-blog, .single {
+
+    article {
+        border-bottom: 1px solid $gray;
+
+        &:not(:last-of-type) {
+            margin-bottom: 50px;
+        }
+
+        .blog-image {
+            @include size(100% 300px);
+            overflow: hidden;
+        }
+
+        .img-wrap {
+            @include size(100%);
+            @include transition(all 1.2s ease);
+            @include transform(scale(1));
+
+            &:hover {
+                @include transform(scale(1.1));
+            }
+        }
+
+        h2 {
+            font-size: 30px;
+            font-weight: 300;
+            margin: 15px 0 20px;
+        }
+
+        .article-footer {
+            overflow: hidden;
+            line-height: 1;
+            padding: 15px 0 30px;
+
+            .right {
+                float: right;
+                color: $dark-gray;
+                font-style: italic;
+
+                .read-more {
+                    font-style: normal;
+                }
+            }
+        }
+    }
+}

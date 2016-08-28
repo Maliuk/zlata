@@ -1,0 +1,93 @@
+/*================================================
+HEADER
+================================================*/
+header {
+    position: relative;
+    z-index: 300;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    background-color: $white;
+
+    .container {
+        padding-bottom: 10px;
+    }
+
+    &::after {
+        position: absolute;
+        @include size(50% 30px);
+        background-color: $light-green;
+        top: 0;
+        right: 0;
+        content: "";
+        z-index: 0;
+    }
+
+    .container {
+        position: relative;
+        z-index: 5;
+    }
+
+    h4 {
+        position: relative;
+        margin: 0;
+        padding: 10px 15px;
+        line-height: 1;
+        color: $white;
+        background-color: $light-green;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 10px;
+        text-transform: uppercase;
+        width: 70%;
+        float: right;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -10px;
+
+            @include triangle(20px 30px, $white, down);
+        }
+    }
+
+    .address {
+        text-align: right;
+        text-transform: uppercase;
+        font-style: italic;
+        line-height: 1;
+        margin: 22px 0;
+
+        span {
+            text-transform: none;
+            color: $dark-gray;
+        }
+    }
+
+    .phones {
+        text-align: right;
+        font-size: 20px;
+        margin-bottom: 25px;
+        line-height: 1;
+
+        span {
+            color: $light-green;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    header {
+
+        .address, .phones {
+            text-align: center;
+            margin: 15px 0;
+            line-height: inherit;
+        }
+    }
+
+    #logo {
+        margin: 15px 0;
+        display: block;
+        text-align: center;
+    }
+}

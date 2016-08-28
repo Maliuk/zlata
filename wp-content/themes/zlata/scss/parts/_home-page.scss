@@ -1,0 +1,205 @@
+/*================================================
+HOME PAGE
+================================================*/
+.home {
+    #content {
+        position: relative;
+        z-index: 5;
+        box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.1), 0px 5px 5px rgba(0, 0, 0, 0.1);
+    }
+    section {
+        position: relative;
+        z-index: 5;
+        padding: 30px 0;
+
+        h2 {
+            font-family: 'Garamond-Bold', serif;
+            font-size: 30px;
+            text-transform: uppercase;
+            padding-bottom: 10px;
+            margin: 0 0 30px 0;
+
+            &.title {
+                border-bottom: 1px solid $gray;
+
+                > div {
+                    display: inline-block;
+                    position: relative;
+                }
+
+                .rhombus {
+                    position: absolute;
+                    right: -70px;
+                    top: 5px;
+                    @include size(20px);
+                    border: 1px solid $light-green;
+                    @include transform(rotate(-45deg));
+
+                    &::before, &::after {
+                        content: "";
+                        position: absolute;
+                        @include size(14px);
+                        top: -9px;
+                        left: -9px;
+                        border: 1px solid $light-green;
+                    }
+
+                    &::after {
+                        top: auto;
+                        left: auto;
+                        bottom: -9px;
+                        right: -9px;
+                    }
+                }
+            }
+        }
+
+        &.bg-green {
+            color: $white;
+        }
+
+        &.bg-gray {
+            h2 {
+                color: $light-green;
+            }
+        }
+
+        &.girl-right {
+            position: relative;
+            min-height: 740px;
+
+            &::before {
+                position: absolute;
+                top: -30px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                content: "";
+                //@include size(100%);
+                background-image: url(../img/girl.png);
+                background-size: 1094px 774px;
+                background-repeat: no-repeat;
+                background-position: 120% top;
+                z-index: 1;
+
+                @media (max-width: 991px) {
+                    opacity: 0.5;
+                    background-position: center;
+                }
+            }
+
+            .container {
+                position: relative;
+                z-index: 5;
+            }
+        }
+    }
+}
+
+#stock-home {
+    position: relative;
+    z-index: 10;
+    height: 281px;
+    margin-bottom: 100px;
+
+    &::before, &::after {
+        $width: 217px;
+        $height: 258px;
+        position: absolute;
+        top: 50%;
+        left: 17px;
+        content: "";
+        @include size($width $height);
+        margin-top: - ($height / 2);
+        background-image: url(../img/stock.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: $width $height;
+        z-index: 0;
+    }
+
+    &::after {
+        left: auto;
+        right: 17px;
+        @include transform(rotate(180deg));
+    }
+
+    h2.title {
+        border: none;
+
+        .rhombus {
+            &, &::before, &::after {
+                border-color: rgba($white, 0.5);
+            }
+        }
+    }
+}
+
+#home-slider {
+    position: relative;
+    max-width: 940px;
+    margin: 0 auto;
+    z-index: 10;
+    //@include transform(translate(-50%, -50%));
+
+    .slider-dots {
+        position: relative;
+        top: -20px;
+        list-style: none;
+        text-align: right;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            @include size(9px);
+            margin: 4px;
+            border-radius: 50%;
+            background-color: $white;
+            opacity: 0.3;
+            cursor: pointer;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .slides {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+
+        &::before {
+            display: block;
+            width: 100%;
+            content: "";
+            padding-top: 24%;
+        }
+
+        .slide {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include transition(all 0.6s ease);
+
+            &.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+#map {
+    position: relative;
+    z-index: 1;
+    @include size(100% 400px);
+}

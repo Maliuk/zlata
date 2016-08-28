@@ -1,0 +1,43 @@
+/*================================================
+CONTACT PAGE
+================================================*/
+.page-template-page-contact {
+
+    #content {
+        position: relative;
+        z-index: 10;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+
+
+        a[href^="mailto:"] {
+            color: inherit;
+        }
+
+        h3 {
+            margin: 40px 0 15px 0;
+
+            &:first-of-type {
+                margin-top: 0px;
+            }
+        }
+
+        p .fa {
+            margin-right: 8px;
+        }
+
+        .contact-image {
+            overflow: hidden;
+            @include size(100% 400px);
+
+            .img-wrap {
+                @include size(100%);
+                @include transition(all 1.2s ease);
+                @include transform(scale(1));
+
+                &:hover {
+                    @include transform(scale(1.1));
+                }
+            }
+        }
+    }
+}

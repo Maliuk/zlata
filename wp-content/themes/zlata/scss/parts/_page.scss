@@ -1,0 +1,37 @@
+/*================================================
+PAGE
+================================================*/
+.page-template-default {
+
+    .blog-image {
+        margin-bottom: 20px;
+        overflow: hidden;
+        @include size(100% 350px);
+
+        .img-wrap {
+            @include size(100%);
+        }
+    }
+}
+
+.page {
+    #content {
+        article {
+            ul {
+                margin: 0 0 15px 0;
+                padding: 0;
+
+                > li {
+                    > ul {
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

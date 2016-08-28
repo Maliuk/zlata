@@ -1,0 +1,380 @@
+/*================================================
+MAIN STYLES
+================================================*/
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: $text-color;
+    font-size: 14px;
+    line-height: 1.43;
+}
+
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 14px;
+}
+h5 {
+    font-size: 12px;
+}
+
+
+.page-title {
+    font-family: 'Garamond-Bold';
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 50px 0 70px;
+}
+
+
+.btn {
+    font-size: 14px;
+    color: $dark-gray;
+    padding: 10px 25px;
+    font-weight: 300;
+    border: 1px solid $dark-gray;
+    border-radius: 20px;
+    @extend %main-transition;
+
+    &:hover {
+        background-color: $dark-gray;
+        color: $white;
+    }
+}
+
+.bg-gray {
+    background-color: $light-gray;
+}
+
+.bg-green {
+    background-color: $green;
+}
+
+.text-green {
+    color: $light-green;
+}
+
+.ariston {
+    font-family: 'Ariston-Normal';
+}
+
+h3.ariston {
+    color: $light-green;
+    text-align: center;
+    font-weight: normal;
+    font-family: 'Ariston-Normal';
+    font-size: 40px;
+}
+
+.img-wrap {
+    display: block;
+    overflow: hidden;
+    @extend %background-image;
+}
+
+
+ul.list-theme {
+    list-style: none;
+
+    &::after {
+        display: table;
+        content: "";
+        clear: both;
+    }
+
+    li {
+        position: relative;
+        padding: 10px 10px 10px 21px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 13px;
+            left: 0;
+            @include size(12px);
+            background-image: url(../img/list.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 12px 12px;
+        }
+    }
+
+    @media (min-width: 500px) {
+        &.cols-2 li {
+            float: left;
+            width: 50%;
+            padding-right: 15px;
+        }
+    }
+}
+
+ul.list-blog {
+    list-style: none;
+
+    &::after {
+        display: table;
+        clear: both;
+        content: "";
+    }
+
+    li {
+        float: left;
+        width: 50%;
+        margin-bottom: 38px;
+        overflow: hidden;
+
+        .lblog-content {
+            padding: 0 15px;
+            float: left;
+            box-sizing: border-box;
+            width: 70%;
+        }
+
+        .lblog-photo {
+            float: left;
+            width: 30%;
+            border-radius: 10px;
+            overflow: hidden;
+
+            .js & {
+                padding-top: 30%;
+                @extend %background-image;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        @media (max-width: 767px) {
+            float: none;
+            width: 100%;
+        }
+    }
+
+    .readmore {
+        color: $light-green;
+        text-decoration: underline;
+        font-style: italic;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+p {
+    &.large {
+        font-size: 18px;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.table {
+    width: 100%;
+
+    th, & {
+        border-bottom: 1px solid $dark-gray;
+        border-top: none !important;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    th {
+        text-transform: uppercase;
+        //text-align: center;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid $gray !important;
+    }
+
+    tr:last-child {
+        td {
+            border-bottom: 1px solid $dark-gray !important;
+        }
+    }
+
+    &.price {
+        td:last-child {
+            width: 20%;
+        }
+
+        tr {
+
+            td {
+                @include transition(all 0.3s ease);
+            }
+
+            &:hover td {
+                background-color: $light-gray;
+            }
+        }
+    }
+}
+
+.zl-collapse {
+    display: block;
+    margin-bottom: 20px;
+
+    .zl-collapse-title {
+        position: relative;
+        border: 1px solid $gray;
+        padding: 12px 15px 12px 48px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 1.2;
+        cursor: pointer;
+        @include transition(all 0.3s ease);
+
+        &::before {
+            font-family: FontAwesome;
+            font-size: 12px;
+            content: "\f067";
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            @include transform(translate(0, -50%));
+        }
+
+        &:hover, &.active {
+            background-color: $light-green;
+            border: 1px solid $light-green;
+            color: $white;
+        }
+
+        &.active::before {
+            content: "\f068";
+        }
+    }
+
+    .zl-collapse-content {
+        display: none;
+        padding: 15px;
+        border-bottom: 1px solid $light-green;
+    }
+}
+
+img.right {
+    float: right;
+    margin: 0 15px;
+}
+
+img.left {
+    float: left;
+    margin: 0 15px;
+}
+
+.read-more {
+    color: $light-green;
+    text-decoration: underline;
+
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+        color: $light-green;
+    }
+}
+
+.social {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        a {
+            color: $light-green;
+            text-decoration: none !important;
+            font-size: 24px;
+        }
+    }
+}
+
+
+#{$all-text-inputs} {
+    border: 1px solid $gray;
+    border-radius: 4px;
+    @include transition(border 0.3s ease);
+}
+
+#{$all-text-inputs-active} {
+    border: 1px solid $light-green;
+    outline: none;
+}
+
+#{$all-text-inputs-focus},
+#{$all-text-inputs-hover} {
+    border: 1px solid $light-green;
+    outline: none;
+}
+
+input[type="text"] {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+}
+
+#searchform {
+    position: relative;
+    margin-bottom: 35px;
+
+    &::after {
+        display: block;
+        position: absolute;
+        content: "\f002";
+        font-family: FontAwesome;
+        top: 0;
+        right: 0;
+        @include size(40px);
+        text-align: center;
+        line-height: 40px;
+        color: $dark-gray;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+}
+
+img.alignleft, img.align-left {
+    float: left;
+    margin: 0 15px 10px 0;
+}
+
+img.alignright, img.align-right {
+    float: right;
+    margin: 0 0 10px 15px;
+}
+
+body:not(.home) {
+    #content {
+        padding-bottom: 70px;
+    }
+}
