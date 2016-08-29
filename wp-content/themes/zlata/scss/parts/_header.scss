@@ -75,6 +75,20 @@ header {
     }
 }
 
+#logo {
+    position: relative;
+
+    @media (min-width: 992px) {
+        top: -32px;
+        left: 40px;
+    }
+
+    img {
+        width: 200px;
+        height: auto;
+    }
+}
+
 @media (max-width: 991px) {
     header {
 

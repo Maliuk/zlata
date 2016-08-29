@@ -65,7 +65,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <a id="logo" href="<?php echo get_home_url(); ?>">
-                            <img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt=""/>
+                            <img src="<?php bloginfo('template_url'); ?>/img/logo-gold.png" alt=""/>
                         </a>
                     </div>
                     <div class="col-md-9">
