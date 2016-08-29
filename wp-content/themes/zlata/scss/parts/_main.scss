@@ -373,6 +373,18 @@ img.alignright, img.align-right {
     margin: 0 0 10px 15px;
 }
 
+.article-separator {
+    position: relative;
+    @include size(100% 50px);
+    
+    .rhombus {
+        left: 50%;
+        top: 50%;
+        right: auto;
+        @include transform(translate(-50%, -50%) rotate(-45deg));
+    }
+}
+
 body:not(.home) {
     #content {
         padding-bottom: 70px;

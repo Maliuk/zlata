@@ -26,31 +26,6 @@ HOME PAGE
                     display: inline-block;
                     position: relative;
                 }
-
-                .rhombus {
-                    position: absolute;
-                    right: -70px;
-                    top: 5px;
-                    @include size(20px);
-                    border: 1px solid $light-green;
-                    @include transform(rotate(-45deg));
-
-                    &::before, &::after {
-                        content: "";
-                        position: absolute;
-                        @include size(14px);
-                        top: -9px;
-                        left: -9px;
-                        border: 1px solid $light-green;
-                    }
-
-                    &::after {
-                        top: auto;
-                        left: auto;
-                        bottom: -9px;
-                        right: -9px;
-                    }
-                }
             }
         }
 
@@ -95,6 +70,31 @@ HOME PAGE
         }
     }
 }
+.rhombus {
+    position: absolute;
+    right: -70px;
+    top: 5px;
+    @include size(20px);
+    border: 1px solid $light-green;
+    @include transform(rotate(-45deg));
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        @include size(14px);
+        top: -9px;
+        left: -9px;
+        border: 1px solid $light-green;
+    }
+
+    &::after {
+        top: auto;
+        left: auto;
+        bottom: -9px;
+        right: -9px;
+    }
+}
+
 
 #stock-home {
     position: relative;

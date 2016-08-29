@@ -356,6 +356,20 @@ img.alignright, img.align-right {
   float: right;
   margin: 0 0 10px 15px; }
 
+.article-separator {
+  position: relative;
+  height: 50px;
+  width: 100%; }
+  .article-separator .rhombus {
+    left: 50%;
+    top: 50%;
+    right: auto;
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    -moz-transform: translate(-50%, -50%) rotate(-45deg);
+    -ms-transform: translate(-50%, -50%) rotate(-45deg);
+    -o-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg); }
+
 body:not(.home) #content {
   padding-bottom: 70px; }
 
@@ -430,6 +444,14 @@ header {
   #logo img {
     width: 200px;
     height: auto; }
+
+.kama_breadcrumbs {
+  color: #abadb3;
+  font-family: "Roboto", sans-serif;
+  padding-top: 15px; }
+  .kama_breadcrumbs a {
+    text-decoration: none !important;
+    color: #4c5059 !important; }
 
 @media (max-width: 991px) {
   header .address, header .phones {
@@ -525,17 +547,22 @@ nav {
         nav menu > li > ul.sub-menu a {
           display: block;
           text-align: left;
-          padding: 10px 15px;
+          padding: 15px 15px;
           color: #4c5059; }
           nav menu > li > ul.sub-menu a:hover, nav menu > li > ul.sub-menu a:focus, nav menu > li > ul.sub-menu a:active {
-            color: #4c5059;
-            text-decoration: none;
-            background-color: #e5e5e5; }
+            color: #00bfaf; }
       nav menu > li.columns > ul.sub-menu {
         -webkit-column-count: 3;
         -moz-column-count: 3;
         column-count: 3;
-        min-width: 800px; }
+        min-width: 900px;
+        left: -93px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding: 15px 100px 15px 15px;
+        background-image: url(../img/services-menu-bg.png);
+        background-repeat: no-repeat;
+        background-position: right bottom; }
       nav menu > li:hover > ul {
         opacity: 1;
         visibility: visible; }
@@ -832,31 +859,6 @@ HOME PAGE
       .home section h2.title > div {
         display: inline-block;
         position: relative; }
-      .home section h2.title .rhombus {
-        position: absolute;
-        right: -70px;
-        top: 5px;
-        height: 20px;
-        width: 20px;
-        border: 1px solid #00bfaf;
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg); }
-        .home section h2.title .rhombus::before, .home section h2.title .rhombus::after {
-          content: "";
-          position: absolute;
-          height: 14px;
-          width: 14px;
-          top: -9px;
-          left: -9px;
-          border: 1px solid #00bfaf; }
-        .home section h2.title .rhombus::after {
-          top: auto;
-          left: auto;
-          bottom: -9px;
-          right: -9px; }
   .home section.bg-green {
     color: #ffffff; }
   .home section.bg-gray h2 {
@@ -883,6 +885,32 @@ HOME PAGE
     .home section.girl-right .container {
       position: relative;
       z-index: 5; }
+
+.rhombus {
+  position: absolute;
+  right: -70px;
+  top: 5px;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #00bfaf;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+  .rhombus::before, .rhombus::after {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    top: -9px;
+    left: -9px;
+    border: 1px solid #00bfaf; }
+  .rhombus::after {
+    top: auto;
+    left: auto;
+    bottom: -9px;
+    right: -9px; }
 
 #stock-home {
   position: relative;
@@ -1032,6 +1060,52 @@ PAGE
 .page #content article img {
   max-width: 100%;
   height: auto; }
+
+.category #content h2 a, .archive #content h2 a {
+  color: inherit; }
+
+.page-template-page-reviews #content article .article-footer {
+  color: #abadb3; }
+  .page-template-page-reviews #content article .article-footer time {
+    font-style: italic;
+    margin-left: 5px; }
+
+/*================================================
+CONTACT PAGE
+================================================*/
+.page-template-page-contact #content {
+  position: relative;
+  z-index: 10;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1); }
+  .page-template-page-contact #content a[href^="mailto:"] {
+    color: inherit; }
+  .page-template-page-contact #content h3 {
+    margin: 40px 0 15px 0; }
+    .page-template-page-contact #content h3:first-of-type {
+      margin-top: 0px; }
+  .page-template-page-contact #content p .fa {
+    margin-right: 8px; }
+  .page-template-page-contact #content .contact-image {
+    overflow: hidden;
+    height: 400px;
+    width: 100%; }
+    .page-template-page-contact #content .contact-image .img-wrap {
+      height: 100%;
+      width: 100%;
+      -webkit-transition: all 1.2s ease;
+      -moz-transition: all 1.2s ease;
+      transition: all 1.2s ease;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1); }
+      .page-template-page-contact #content .contact-image .img-wrap:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1); }
 
 /*================================================
 FOOTER

@@ -128,4 +128,8 @@
                     </div>
                 </div>
             </div>
+        <?php } else { ?>
+            <div class="container text-center">
+                <?php if (function_exists('kama_breadcrumbs')) kama_breadcrumbs(' // '); ?>
+            </div>
         <?php } ?>

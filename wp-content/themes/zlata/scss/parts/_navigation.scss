@@ -104,14 +104,14 @@ nav {
                 a {
                     display: block;
                     text-align: left;
-                    padding: 10px 15px;
+                    padding: 15px 15px;
                     color: $text-color;
                     @extend %main-transition;
 
                     &:hover, &:focus, &:active {
-                        color: $text-color;
-                        text-decoration: none;
-                        background-color: $gray;
+                        color: $light-green;
+                        //text-decoration: none;
+                        //background-color: $gray;
                     }
                 }
             }
@@ -119,7 +119,17 @@ nav {
             &.columns {
                 > ul.sub-menu {
                     @include column-count(3);
-                    min-width: 800px;
+                    min-width: 900px;
+                    left: -93px;
+                    
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    
+                    padding: 15px 100px 15px 15px;
+                    
+                    background-image: url(../img/services-menu-bg.png);
+                    background-repeat: no-repeat;
+                    background-position: right bottom;
                 }
             }
 

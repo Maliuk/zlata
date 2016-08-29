@@ -89,6 +89,17 @@ header {
     }
 }
 
+.kama_breadcrumbs {
+    color: $dark-gray;
+    font-family: "Roboto", sans-serif;
+    padding-top: 15px;
+
+    a {
+        text-decoration: none !important;
+        color: $text-color !important;
+    }
+}
+
 @media (max-width: 991px) {
     header {
 
