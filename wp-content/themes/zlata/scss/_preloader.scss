@@ -20,6 +20,10 @@
         opacity: 0;
         visibility: hidden;
     }
+    
+    @media (max-width: 767px) {
+        z-index: 999;
+    }
 }
 
 .preloader-container{

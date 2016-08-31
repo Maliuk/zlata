@@ -27,7 +27,7 @@
                         <?php the_content(); ?>
 
                         <div class="article-footer">
-                            <i class="fa fa-comment-o" aria-hidden="true"></i> 3
+                            <!--<i class="fa fa-comment-o" aria-hidden="true"></i> 3-->
 
                             <div class="right">
                                 <time><?php the_time('d F Y г.'); ?></time> / <a class="read-more" href="<?php echo get_home_url(); ?>/zlata-news/">Назад к записям</a>

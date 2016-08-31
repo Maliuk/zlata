@@ -63,12 +63,12 @@
                 <h4>лазерно-эстетической медицины, косметологии и пластической хирургии</h4>
                 <div class="clearfix"></div>
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-sm-3">
                         <a id="logo" href="<?php echo get_home_url(); ?>">
                             <img src="<?php bloginfo('template_url'); ?>/img/logo-gold.png" alt=""/>
                         </a>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-sm-9">
                         <div class="address">
                             Адрес:  <span>Украина, г.Николаев, ул.Бузника 14</span>
                         </div>

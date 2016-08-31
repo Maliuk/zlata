@@ -58,14 +58,69 @@ HOME PAGE
                 z-index: 1;
 
                 @media (max-width: 991px) {
-                    opacity: 0.5;
+                    opacity: 0.15;
                     background-position: center;
+                    background-size: cover;
                 }
             }
 
             .container {
                 position: relative;
                 z-index: 5;
+            }
+        }
+    }
+    
+    @media (max-width: 991px) {
+        section {
+            
+            h2 {
+                line-height: 1;
+                padding: 15px 0;
+                text-align: center;
+                margin-bottom: 15px;
+                border-bottom: 1px solid $gray;
+                
+                .rhombus {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 767px) {
+        section {
+            text-align: justify;
+            padding-top: 5px;
+            
+            h2 {
+                font-size: 24px;
+            }
+            
+            img.right, img.left {
+                width: 100%;
+                height: auto;
+                margin: 10px 0;
+            }
+        }
+    }
+    
+    @media (max-width: 400px) {
+        section {
+            .list-blog {
+                .lblog-photo {
+                    width: 120px;
+                    height: 120px;
+                    padding: 0;
+                    float: none;
+                    margin: 0 auto 10px;
+                }
+                
+                .lblog-content {
+                    padding: 0;
+                    text-align: center;
+                    width: 100%;
+                }
             }
         }
     }
@@ -125,12 +180,28 @@ HOME PAGE
     }
 
     h2.title {
+        margin-bottom: 0;
         border: none;
 
         .rhombus {
             &, &::before, &::after {
                 border-color: rgba($white, 0.5);
             }
+        }
+    }
+    
+    @media (max-width: 1300px) {
+        &::before, &::after {
+            opacity: 0.35;
+        }
+    }
+    
+    @media (max-width: 991px) {
+        margin-bottom: 0;
+        height: auto;
+        
+        &::before, &::after {
+            opacity: 0.15;
         }
     }
 }

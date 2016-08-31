@@ -38,10 +38,10 @@
 
                         <h2><?php the_title(); ?></h2>
 
-                        <?php the_content(); ?>
+                        <?php the_excerpt(); ?>
 
                         <div class="article-footer">
-                            <i class="fa fa-comment-o" aria-hidden="true"></i> 3
+                            <!--<i class="fa fa-comment-o" aria-hidden="true"></i> 3-->
 
                             <div class="right">
                                 <time><?php the_time('d F Y г.'); ?></time> / <a class="read-more" href="<?php the_permalink(); ?>">Подробнее</a>

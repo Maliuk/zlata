@@ -25,6 +25,9 @@ COLORS
   #preloader.preloader-hide {
     opacity: 0;
     visibility: hidden; }
+  @media (max-width: 767px) {
+    #preloader {
+      z-index: 999; } }
 
 .preloader-container {
   width: 100px;
@@ -434,16 +437,24 @@ header {
     line-height: 1; }
     header .phones span {
       color: #00bfaf; }
+  @media (max-width: 700px) {
+    header h4, header::after {
+      display: none; }
+    header .phones {
+      font-size: 16px; } }
 
 #logo {
   position: relative; }
+  #logo img {
+    width: 200px;
+    height: auto; }
   @media (min-width: 992px) {
     #logo {
       top: -32px;
       left: 40px; } }
-  #logo img {
-    width: 200px;
-    height: auto; }
+  @media (max-width: 767px) {
+    #logo img {
+      width: 150px; } }
 
 .kama_breadcrumbs {
   color: #abadb3;
@@ -629,6 +640,20 @@ nav {
       #after-header .after-header-text .btn:hover {
         color: #00a698;
         background-color: #ffffff; }
+  @media (max-width: 767px) {
+    #after-header {
+      height: auto; }
+      #after-header .after-header-text {
+        position: relative;
+        margin: 0 -15px;
+        width: 100%;
+        width: -webkit-calc(100% + 30px);
+        width: calc(100% + 30px);
+        height: 100%;
+        left: 0;
+        text-align: center; }
+        #after-header .after-header-text::before {
+          display: none; } }
 
 /*================================================
 HAMBURGER BUTTON
@@ -636,7 +661,7 @@ HAMBURGER BUTTON
 .c-hamburger {
   display: block;
   position: absolute;
-  left: 15px;
+  right: 15px;
   bottom: 0;
   overflow: hidden;
   margin: -20px 0 0 0;
@@ -880,11 +905,42 @@ HOME PAGE
       z-index: 1; }
       @media (max-width: 991px) {
         .home section.girl-right::before {
-          opacity: 0.5;
-          background-position: center; } }
+          opacity: 0.15;
+          background-position: center;
+          background-size: cover; } }
     .home section.girl-right .container {
       position: relative;
       z-index: 5; }
+@media (max-width: 991px) {
+  .home section h2 {
+    line-height: 1;
+    padding: 15px 0;
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5; }
+    .home section h2 .rhombus {
+      display: none; } }
+@media (max-width: 767px) {
+  .home section {
+    text-align: justify;
+    padding-top: 5px; }
+    .home section h2 {
+      font-size: 24px; }
+    .home section img.right, .home section img.left {
+      width: 100%;
+      height: auto;
+      margin: 10px 0; } }
+@media (max-width: 400px) {
+  .home section .list-blog .lblog-photo {
+    width: 120px;
+    height: 120px;
+    padding: 0;
+    float: none;
+    margin: 0 auto 10px; }
+  .home section .list-blog .lblog-content {
+    padding: 0;
+    text-align: center;
+    width: 100%; } }
 
 .rhombus {
   position: absolute;
@@ -939,9 +995,19 @@ HOME PAGE
     -o-transform: rotate(180deg);
     transform: rotate(180deg); }
   #stock-home h2.title {
+    margin-bottom: 0;
     border: none; }
     #stock-home h2.title .rhombus, #stock-home h2.title .rhombus::before, #stock-home h2.title .rhombus::after {
       border-color: rgba(255, 255, 255, 0.5); }
+  @media (max-width: 1300px) {
+    #stock-home::before, #stock-home::after {
+      opacity: 0.35; } }
+  @media (max-width: 991px) {
+    #stock-home {
+      margin-bottom: 0;
+      height: auto; }
+      #stock-home::before, #stock-home::after {
+        opacity: 0.15; } }
 
 #home-slider {
   position: relative;

@@ -212,6 +212,24 @@ nav {
             }
         }
     }
+    
+    @media (max-width: 767px) {
+        height: auto;
+        
+        .after-header-text {
+            position: relative;
+            margin: 0 -15px;
+            width: 100%;
+            @include calc(width, "100% + 30px");
+            height: 100%;
+            left: 0;
+            text-align: center;
+            
+            &::before {
+                display: none;
+            }
+        }
+    }
 }
 
 
@@ -221,7 +239,7 @@ HAMBURGER BUTTON
 .c-hamburger {
     display: block;
     position: absolute;
-    left: 15px;
+    right: 15px;
     bottom: 0;
     overflow: hidden;
     margin: -20px 0 0 0;
