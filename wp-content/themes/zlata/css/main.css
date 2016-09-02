@@ -187,6 +187,12 @@ ul.list-blog {
     width: 50%;
     margin-bottom: 38px;
     overflow: hidden; }
+    @media (min-width: 768px) {
+      ul.list-blog li {
+        min-height: 220px; } }
+    @media (min-width: 992px) {
+      ul.list-blog li {
+        min-height: 160px; } }
     ul.list-blog li .lblog-content {
       padding: 0 15px;
       float: left;
